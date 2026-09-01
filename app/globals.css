@@ -1,26 +1,3 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+:root { /* Couleurs principales */ --background: #f5f3ee; --foreground: #161616; /* Noir principal */ --black: #111111; --black-soft: #1a1a18; /* Blanc cassé */ --cream: #f5f3ee; --cream-dark: #e9e5dc; /* Accent chaleureux */ --accent: #c86f45; --accent-dark: #a95834; /* Textes */ --muted: #706d67; --muted-light: #aaa59d; /* Bordures */ --border: rgba(22, 22, 22, 0.12); --border-light: rgba(255, 255, 255, 0.15); } @theme inline { --color-background: var(--background); --color-foreground: var(--foreground); --color-black: var(--black); --color-black-soft: var(--black-soft); --color-cream: var(--cream); --color-cream-dark: var(--cream-dark); --color-accent: var(--accent); --color-accent-dark: var(--accent-dark); --color-muted: var(--muted); --color-muted-light: var(--muted-light); --font-sans: var(--font-sans); --font-serif: var(--font-serif); } * { box-sizing: border-box; } html { scroll-behavior: smooth; } body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans), Arial, sans-serif; overflow-x: hidden; } /* Sélection de texte */ ::selection { background: var(--accent); color: white; } /* Liens */ a { color: inherit; text-decoration: none; } /* Images */ img { max-width: 100%; height: auto; } /* Typographie générale */ h1, h2, h3, h4, h5, h6, p { margin: 0; } /* Titres éditoriaux */ .font-editorial { font-family: var(--font-serif), Georgia, serif; } /* Container global */ .container-site { width: 100%; max-width: 1440px; margin-inline: auto; padding-inline: 24px; } @media (min-width: 768px) { .container-site { padding-inline: 40px; } } @media (min-width: 1280px) { .container-site { padding-inline: 64px; } } /* Label de section */ .section-label { display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 700; line-height: 1; letter-spacing: 0.14em; text-transform: uppercase; } .section-label::before { content: ""; display: block; width: 32px; height: 1px; background: currentColor; } /* Style commun aux boutons */ .btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 0 24px; background: var(--accent); color: white; font-size: 13px; font-weight: 700; transition: background-color 200ms ease, transform 200ms ease; } .btn-primary:hover { background: var(--accent-dark); transform: translateY(-2px); } .btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 0 24px; border: 1px solid var(--border); background: transparent; font-size: 13px; font-weight: 700; transition: background-color 200ms ease, border-color 200ms ease; } .btn-secondary:hover { background: var(--black); border-color: var(--black); color: white; } /* Focus accessible */ :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; } /* Scrollbar */ ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: var(--cream); } ::-webkit-scrollbar-thumb { background: #a6a097; } ::-webkit-scrollbar-thumb:hover { background: var(--black); }
