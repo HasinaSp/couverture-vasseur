@@ -38,16 +38,16 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
-              href="#devis"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#A68868] px-7 py-4 font-semibold text-white backdrop-blur transition hover:bg-[#A68868]/90"
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2  rounded-md bg-[#20548E] px-6 py-3 font-semibold transition hover:bg-[#20548E]/90 text-white backdrop-blur"
             >
-              Demander un devis
+              Devis gratuit sous 48h
               {/* <ArrowRight size={18} /> */}
             </a>
 
             <a
               href="tel:+261000000000"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-4 font-semibold text-white backdrop-blur transition hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-7 py-4 font-semibold text-white backdrop-blur transition hover:bg-white/10"
             >
               {/* <Phone size={18} /> */}
               Nous appeler
