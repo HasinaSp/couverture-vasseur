@@ -162,7 +162,7 @@ export default function Services() {
 
           <Link
             href="#contact"
-            className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-md bg-[#A68868] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#8E7358]"
+            className="group inline-flex shrink-0 items-center justify-center gap-3 rounded-md bg-[#20548E] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#20548E]/90"
           >
             Parler de mon projet
             <ArrowUpRight

@@ -64,11 +64,11 @@ export default function Materials() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#071739]/70 via-transparent to-transparent" />
 
             <div className="absolute bottom-0 left-0 right-0 p-7 sm:p-9">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#A68868]">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E3C39D]">
                 Savoir-faire
               </p>
 
-              <p className="mt-3 max-w-md font-editorial text-2xl leading-tight text-white sm:text-3xl">
+              <p className="mt-3 max-w-md font-editorial text-xl leading-tight text-white sm:text-3xl">
                 Une toiture se pense dans son ensemble, jusque dans les
                 moindres détails.
               </p>

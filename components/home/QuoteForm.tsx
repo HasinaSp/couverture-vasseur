@@ -113,7 +113,7 @@ export default function QuoteForm() {
                     name="service"
                     required
                     defaultValue=""
-                    className="h-14 w-full appearance-none border border-[#0C131C]/15 bg-[#F5F3EE] px-4 pr-12 text-sm outline-none transition focus:border-[#A68868] focus:ring-2 focus:ring-[#A68868]/20"
+                    className="h-14 w-full appearance-none border border-[#0C131C]/15 bg-[#F5F3EE] px-4 pr-12 text-sm outline-none transition focus:border-[#20548E] focus:ring-2 focus:ring-[#20548E]/20"
                   >
                     <option value="" disabled>
                       Sélectionnez votre besoin
@@ -149,7 +149,7 @@ export default function QuoteForm() {
                   required
                   autoComplete="name"
                   placeholder="Jean Dupont"
-                  className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#A68868] focus:ring-2 focus:ring-[#A68868]/20"
+                  className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#20548E] focus:ring-2 focus:ring-[#20548E]/20"
                 />
               </div>
 
@@ -169,7 +169,7 @@ export default function QuoteForm() {
                   required
                   autoComplete="street-address"
                   placeholder="Rue et ville, ou uniquement votre commune"
-                  className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#A68868] focus:ring-2 focus:ring-[#A68868]/20"
+                  className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#20548E] focus:ring-2 focus:ring-[#20548E]/20"
                 />
               </div>
 
@@ -189,7 +189,7 @@ export default function QuoteForm() {
                   required
                   autoComplete="tel"
                   placeholder="06 00 00 00 00"
-                  className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#A68868] focus:ring-2 focus:ring-[#A68868]/20"
+                  className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#20548E] focus:ring-2 focus:ring-[#20548E]/20"
                 />
               </div>
 
@@ -211,7 +211,7 @@ export default function QuoteForm() {
                   type="email"
                   autoComplete="email"
                   placeholder="Pour recevoir votre devis par écrit"
-                  className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#A68868] focus:ring-2 focus:ring-[#A68868]/20"
+                  className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#20548E] focus:ring-2 focus:ring-[#20548E]/20"
                 />
               </div>
 
@@ -229,7 +229,7 @@ export default function QuoteForm() {
                   name="message"
                   rows={4}
                   placeholder="Décrivez brièvement votre projet ou votre problème..."
-                  className="w-full resize-none border border-[#0C131C]/15 bg-[#F5F3EE] px-4 py-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#A68868] focus:ring-2 focus:ring-[#A68868]/20"
+                  className="w-full resize-none border border-[#0C131C]/15 bg-[#F5F3EE] px-4 py-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#20548E] focus:ring-2 focus:ring-[#20548E]/20"
                 />
               </div>
 
@@ -237,7 +237,7 @@ export default function QuoteForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex h-14 w-full items-center justify-center rounded-md bg-[#A68868] px-6 text-sm font-bold text-white transition hover:bg-[#8E7358] disabled:cursor-not-allowed disabled:opacity-70"
+                className="flex h-14 w-full items-center justify-center rounded-md bg-[#20548E] px-6 text-sm font-bold text-white transition hover:bg-[#20548E]/80 disabled:cursor-not-allowed disabled:opacity-70"
               >
                 {isSubmitting ? "Envoi en cours..." : "Être rappelé"}
               </button>
