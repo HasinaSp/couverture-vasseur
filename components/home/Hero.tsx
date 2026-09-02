@@ -20,11 +20,10 @@ export default function Hero() {
       <div className="relative mx-auto flex min-h-[850px] max-w-7xl items-center px-6 py-32">
         <div className="max-w-3xl text-white">
           <p className="mb-6 text-sm font-semibold uppercase tracking-[0.25em] text-white/70">
-            Votre entreprise · Votre ville
+            Couvreur Vasseur · Angers | Maine-et-Loire 49
           </p>
 
           <h1 className="text-5xl font-bold leading-tight md:text-6xl">
-            Couvreur Vasseur —
             Rénovation &
             Réparation Toiture à Angers
           </h1>

@@ -1,8 +1,13 @@
 import About from "@/components/home/About";
+import Artisan from "@/components/home/Artisan";
+import Guarantees from "@/components/home/Guarantees";
 import Hero from "@/components/home/Hero";
 import Materials from "@/components/home/Materials";
+import Pricing from "@/components/home/Pricing";
+import Process from "@/components/home/Process";
 import Projects from "@/components/home/Projects";
 import QuoteForm from "@/components/home/QuoteForm";
+import ServiceArea from "@/components/home/ServiceArea";
 import Services from "@/components/home/Services";
 import Header from "@/components/layout/Header";
 import { Clock, MapPin, Star, TriangleAlert } from "lucide-react";
@@ -20,7 +25,7 @@ const TopBar = () => (
       {/* Zone d'intervention */}
       <div className="hidden items-center gap-2 md:flex">
         <MapPin size={16} className="shrink-0 text-[#A68868]" />
-        <h1 className="font-editorial text-xl leading-tight text-white sm:text-2xl">
+        <h1>
           Couvreur, zingueur à Angers | Maine-et-Loire 49
         </h1>
       </div>
@@ -66,6 +71,11 @@ export default function Home() {
         <Services />
         <Materials />
         <Projects />
+        <Artisan/>
+        <Process />
+        <Pricing />
+        <Guarantees />
+        <ServiceArea />
       </main>
 
       <Footer />
