@@ -114,9 +114,9 @@ export default function Pricing() {
                 className="group relative min-h-[270px] bg-[#F5F3EE] p-6 transition-colors duration-300 hover:bg-white sm:p-7 lg:p-8"
               >
                 <div className="flex items-start justify-between">
-                  <span className="text-xs font-bold tracking-[0.15em] text-[#A68868]">
+                  <h2 className="text-xs font-bold tracking-[0.15em] text-[#A68868]">
                     {factor.number}
-                  </span>
+                  </h2>
 
                   <Icon
                     size={22}

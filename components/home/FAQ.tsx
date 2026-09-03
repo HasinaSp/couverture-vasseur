@@ -85,9 +85,9 @@ return ( <section id="faq" className="bg-white py-20 sm:py-24"> <div className="
               </span>
 
               {/* Question */}
-              <span className="flex-1 font-editorial text-xl leading-snug text-[#071739] sm:text-2xl">
+              <h3 className="flex-1 font-editorial text-xl leading-snug text-[#071739] sm:text-2xl">
                 {faq.question}
-              </span>
+              </h3>
 
               {/* Icon */}
               <span

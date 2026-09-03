@@ -16,7 +16,7 @@ const TopBar = () => (
       </div>
 
       {/* Zone d'intervention */}
-      <div className="hidden items-center gap-2 md:flex">
+      <h1 className="hidden items-center gap-2 md:flex">
         <MapPin
           size={15}
           className="shrink-0 text-[#A68868]"
@@ -24,7 +24,7 @@ const TopBar = () => (
         <span>
           Angers · Maine-et-Loire 49
         </span>
-      </div>
+      </h1>
 
       {/* Avis Google */}
       <div className="hidden items-center gap-2 lg:flex">
