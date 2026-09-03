@@ -3,7 +3,7 @@ import { ArrowRight, Phone, Star } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[850px] overflow-hidden">
+    <section id="a-propos" className="relative min-h-[850px] overflow-hidden">
       {/* Background */}
       <Image
         src="/images/ralliement-a-angers.jpg"
