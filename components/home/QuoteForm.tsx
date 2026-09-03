@@ -1,7 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useActionState } from "react";
 import { Check, ChevronDown } from "lucide-react";
+import { createQuoteRequest } from "@/app/actions/quote";
+
+const initialState = {
+  success: false,
+  message: "",
+  errors: {},
+};
 
 const services = [
   "Sélectionnez votre besoin",
@@ -17,21 +24,10 @@ const services = [
 ];
 
 export default function QuoteForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
-    setIsSubmitting(true);
-
-    // Pour l'instant, le formulaire est uniquement visuel.
-    // Nous connecterons ensuite ce formulaire à une API.
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    setIsSubmitting(false);
-
-    alert("Votre demande a bien été envoyée !");
-  }
+  const [state, formAction, isPending] = useActionState(
+    createQuoteRequest,
+    initialState
+  );
 
   return (
     <section
@@ -97,7 +93,22 @@ export default function QuoteForm() {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form action={formAction} className="space-y-5">
+              {/* Message global */}
+              {state.message && (
+                <div
+                  role="status"
+                  aria-live="polite"
+                  className={`border p-4 text-sm leading-6 ${
+                    state.success
+                      ? "border-green-200 bg-green-50 text-green-800"
+                      : "border-red-200 bg-red-50 text-red-800"
+                  }`}
+                >
+                  {state.message}
+                </div>
+              )}
+
               {/* Besoin */}
               <div>
                 <label
@@ -113,6 +124,7 @@ export default function QuoteForm() {
                     name="service"
                     required
                     defaultValue=""
+                    aria-invalid={!!state.errors?.service}
                     className="h-14 w-full appearance-none border border-[#0C131C]/15 bg-[#F5F3EE] px-4 pr-12 text-sm outline-none transition focus:border-[#20548E] focus:ring-2 focus:ring-[#20548E]/20"
                   >
                     <option value="" disabled>
@@ -131,6 +143,12 @@ export default function QuoteForm() {
                     className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[#0C131C]/50"
                   />
                 </div>
+
+                {state.errors?.service && (
+                  <p className="mt-1 text-sm text-red-600">
+                    {state.errors.service}
+                  </p>
+                )}
               </div>
 
               {/* Nom */}
@@ -149,8 +167,15 @@ export default function QuoteForm() {
                   required
                   autoComplete="name"
                   placeholder="Jean Dupont"
+                  aria-invalid={!!state.errors?.name}
                   className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#20548E] focus:ring-2 focus:ring-[#20548E]/20"
                 />
+
+                {state.errors?.name && (
+                  <p className="mt-1 text-sm text-red-600">
+                    {state.errors.name}
+                  </p>
+                )}
               </div>
 
               {/* Adresse */}
@@ -169,8 +194,15 @@ export default function QuoteForm() {
                   required
                   autoComplete="street-address"
                   placeholder="Rue et ville, ou uniquement votre commune"
+                  aria-invalid={!!state.errors?.address}
                   className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#20548E] focus:ring-2 focus:ring-[#20548E]/20"
                 />
+
+                {state.errors?.address && (
+                  <p className="mt-1 text-sm text-red-600">
+                    {state.errors.address}
+                  </p>
+                )}
               </div>
 
               {/* Téléphone */}
@@ -189,8 +221,15 @@ export default function QuoteForm() {
                   required
                   autoComplete="tel"
                   placeholder="06 00 00 00 00"
+                  aria-invalid={!!state.errors?.phone}
                   className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#20548E] focus:ring-2 focus:ring-[#20548E]/20"
                 />
+
+                {state.errors?.phone && (
+                  <p className="mt-1 text-sm text-red-600">
+                    {state.errors.phone}
+                  </p>
+                )}
               </div>
 
               {/* Email */}
@@ -211,8 +250,15 @@ export default function QuoteForm() {
                   type="email"
                   autoComplete="email"
                   placeholder="Pour recevoir votre devis par écrit"
+                  aria-invalid={!!state.errors?.email}
                   className="h-14 w-full border border-[#0C131C]/15 bg-[#F5F3EE] px-4 text-sm outline-none transition placeholder:text-[#0C131C]/35 focus:border-[#20548E] focus:ring-2 focus:ring-[#20548E]/20"
                 />
+
+                {state.errors?.email && (
+                  <p className="mt-1 text-sm text-red-600">
+                    {state.errors.email}
+                  </p>
+                )}
               </div>
 
               {/* Message */}
@@ -236,10 +282,10 @@ export default function QuoteForm() {
               {/* Bouton */}
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isPending}
                 className="flex h-14 w-full items-center justify-center rounded-md bg-[#20548E] px-6 text-sm font-bold text-white transition hover:bg-[#20548E]/80 disabled:cursor-not-allowed disabled:opacity-70"
               >
-                {isSubmitting ? "Envoi en cours..." : "Être rappelé"}
+                {isPending ? "Envoi en cours..." : "Être rappelé"}
               </button>
 
               <p className="text-center text-xs leading-5 text-[#0C131C]/50">

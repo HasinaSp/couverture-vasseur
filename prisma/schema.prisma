@@ -12,14 +12,26 @@ datasource db {
   provider = "postgresql"
 }
 
+enum QuoteRequestStatus {
+  NEW
+  CONTACTED
+  QUOTED
+  COMPLETED
+  CANCELLED
+}
+
 model QuoteRequest {
   id        String   @id @default(cuid())
+
   service   String
   name      String
   address   String
   phone     String
   email     String?
   message   String?
+
+  status    QuoteRequestStatus @default(NEW)
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
