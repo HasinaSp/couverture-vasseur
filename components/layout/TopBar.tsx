@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Clock, MapPin, Star, TriangleAlert } from "lucide-react";
 
 const TopBar = () => (
@@ -28,13 +29,20 @@ const TopBar = () => (
 
       {/* Avis Google */}
       <div className="hidden items-center gap-2 lg:flex">
-        <Star
-          size={15}
-          className="shrink-0 fill-[#A68868] text-[#A68868]"
+        <Image
+                src="/icons/google.svg"
+                alt="Google"
+                width={18}
+                height={18}
+                className="h-[18px] w-[18px]"
         />
         <span>
           4,9 / 5 · 47 avis Google
         </span>
+        <Star
+          size={15}
+          className="shrink-0 fill-[#A68868] text-[#A68868]"
+        />
       </div>
 
       {/* Urgence */}
