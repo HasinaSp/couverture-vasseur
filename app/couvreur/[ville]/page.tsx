@@ -17,6 +17,7 @@ import LocalFAQ from "@/components/local/LocalFAQ";
 import LocalNearby from "@/components/local/LocalNearby";
 import LocalFinalCTA from "@/components/local/LocalFinalCTA";
 import Footer from "@/components/Footer";
+import TopBar from "@/components/layout/TopBar";
 
 type PageProps = {
   params: Promise<{
@@ -82,6 +83,9 @@ export default async function LocalCityPage({
 
   return (
     <main>
+    <div className="fixed top-0 left-0 z-50 w-full">
+      <TopBar />
+    </div>
       <LocalHero city={city} />
 
       <LocalPathologies city={city} />

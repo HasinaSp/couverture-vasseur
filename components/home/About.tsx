@@ -18,7 +18,7 @@ const commitments = [
 export default function About() {
   return (
     <section
-      id="entreprise"
+      id="a-propos"
       className="bg-[#F5F3EE] py-20 sm:py-24 lg:py-32"
     >
       <div className="container-site">
