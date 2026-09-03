@@ -1,5 +1,8 @@
+import Footer from "@/components/Footer";
 import About from "@/components/home/About";
 import Artisan from "@/components/home/Artisan";
+import FAQ from "@/components/home/FAQ";
+import FinalCTA from "@/components/home/FinalCTA";
 import Guarantees from "@/components/home/Guarantees";
 import Hero from "@/components/home/Hero";
 import Materials from "@/components/home/Materials";
@@ -50,11 +53,11 @@ const TopBar = () => (
   </div>
 );
 
-const Footer = () => (
-  <footer className="bg-[#071739] px-4 py-6 text-center text-sm text-[#CDD5DB]">
-    <p>© 2026 Couverture Vasseur</p>
-  </footer>
-);
+// const Footer = () => (
+//   <footer className="bg-[#071739] px-4 py-6 text-center text-sm text-[#CDD5DB]">
+//     <p>© 2026 Couverture Vasseur</p>
+//   </footer>
+// );
 
 export default function Home() {
   return (
@@ -76,9 +79,10 @@ export default function Home() {
         <Pricing />
         <Guarantees />
         <ServiceArea />
+        <FAQ />
+        <FinalCTA />
+        <Footer />
       </main>
-
-      <Footer />
     </>
   );
 }
